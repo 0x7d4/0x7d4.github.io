@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: igor-kupczynski/notion-exporter@v1.0.2
         with:
-          pages: "7a464aba4a42409da5b03163637a2120"
+          pages: "Mohammad-Momeni-7a464aba4a42409da5b03163637a2120"
           output-dir: notion-backup
           notion-token: ${{ secrets.NOTION_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
