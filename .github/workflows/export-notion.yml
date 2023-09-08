@@ -14,4 +14,4 @@ jobs:
           pages: "7a464aba-4a42-409d-a5b0-3163637a2120"
           output-dir: notion-backup
           notion-token: ${{ secrets.NOTION_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+
