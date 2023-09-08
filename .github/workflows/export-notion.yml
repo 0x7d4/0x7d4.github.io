@@ -9,7 +9,7 @@ jobs:
   export:
     runs-on: ubuntu-latest
     steps:
-      - uses: 0x7d4/notionweb@v0.0.1-alpha.3
+      - uses: 0x7d4/notionweb@v0.0.1-alpha.4
         with:
           page: 7a464aba4a42409da5b03163637a2120 
           token-v2: ${{ secrets.NOTION_TOKEN_V2 }}
