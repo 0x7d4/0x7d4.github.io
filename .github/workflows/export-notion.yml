@@ -2,24 +2,28 @@ name: Export my notion workspace
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # Call the export every 6 hours
+    - cron: "0 */6 * * *" # Call the export every 6 hours
   workflow_dispatch:
 
 jobs:
   export:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - uses: 0x7d4/notionweb@v0.0.1-alpha.4
         with:
-          page: 7a464aba4a42409da5b03163637a2120 
+          page: 7a464aba4a42409da5b03163637a2120
           token-v2: ${{ secrets.NOTION_TOKEN_V2 }}
           file-token: ${{ secrets.NOTION_FILE_TOKEN }}
-      
+
       - name: Commit changes
         run: |
           ls -al
-          git config --global user.name "0x7d4"
-          git config --global user.email "lo3me@pm.me"
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
           git add .
           git commit -m "Update Notion workspace"
           git push
+  
