@@ -17,6 +17,7 @@ jobs:
       
       - name: Commit changes
         run: |
+          ls -al
           git config --global user.name "0x7d4"
           git config --global user.email "lo3me@pm.me"
           git add .
