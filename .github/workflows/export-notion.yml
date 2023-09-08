@@ -14,3 +14,11 @@ jobs:
           page: 7a464aba4a42409da5b03163637a2120 
           token-v2: ${{ secrets.NOTION_TOKEN_V2 }}
           file-token: ${{ secrets.NOTION_FILE_TOKEN }}
+      
+      - name: Commit changes
+        run: |
+          git config --global user.name "0x7d4"
+          git config --global user.email "lo3me@pm.me"
+          git add .
+          git commit -m "Update Notion workspace"
+          git push
