@@ -3,15 +3,13 @@ name: Export my notion workspace
 on:
   schedule:
     - cron: "0 */6 * * *"  # Call the export every 6 hours
-  workflow_dispatch: {}
 
 jobs:
   export:
     runs-on: ubuntu-latest
     steps:
-      - uses: igor-kupczynski/notion-exporter@v1.0.2
+      - uses: 0x7d4/notionweb@v0.0.1-alpha.2
         with:
-          pages: "7a464aba-4a42-409d-a5b0-3163637a2120"
-          output-dir: notion-backup
-          notion-token: ${{ secrets.NOTION_TOKEN }}
-
+          page: 7a464aba4a42409da5b03163637a2120 
+          token-v2: ${{ secrets.NOTION_TOKEN_V2 }}
+          file-token: ${{ secrets.NOTION_FILE_TOKEN }}
