@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: 0x7d4/notionweb@v0.0.1-alpha.4
         with:
@@ -26,4 +28,3 @@ jobs:
           git add .
           git commit -m "Update Notion workspace"
           git push
-  
