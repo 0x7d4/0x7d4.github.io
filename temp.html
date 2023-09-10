@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MathJax Inline Math Example</title>
+	<link rel="import" href="./header.html">
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: { inlineMath: [['$', '$']] }
+    });
+  </script>
+	<style>
+		body {
+			/* background-color: rgba(250, 235, 215, 0.23); */
+		}
+
+		main {
+			margin: 0 25%;
+			background-color: #fff;
+			padding: 2rem;
+		}
+
+		@media (max-width: 768px) {
+			main {
+				margin: 0 1rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Header</h1>
+	</header>
+	<main>
+		<view></view>
+	</main>
+	<footer>
+		<h2>Footer</h2>
+	</footer>
+</body>
+
+</html>
